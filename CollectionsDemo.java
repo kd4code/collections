@@ -42,14 +42,15 @@ public class CollectionsDemo {
 		Employee e3=new Employee(15,"Sita");
 		List al=new ArrayList<>();
 		Sortid sid=new Sortid();
-		//Collections.addAll(al,e1,e2,e3);
-		Collections.addAll(al,"Ram","Sita","Shyam","Lakshman");
+		Collections.addAll(al,e1,e2,e3);
+		//Collections.addAll(al,"Ram","Sita","Shyam","Lakshman");
 		System.out.println("Created ArrayList:"+al);
-	    Collections.sort(al);	
+	    Collections.sort(al,sid);	
 	    System.out.println("After sorting:"+al);
-	    //System.out.println("Searching:"+Collections.binarySearch(al,e3,sid));
-	    //Collections.sort(al,Collections.reverseOrder(sid));
-	    //System.out.println("Reverse Sorted :"+al);
+	    System.out.println("Searching:"+Collections.binarySearch(al,e3,sid));
+	    Collections.sort(al,Collections.reverseOrder(sid));
+	    System.out.println("Reverse Sorted :"+al);
+	    System.out.println("Max:"+Collections.max(al,sid));
 	    
 	}
 }
